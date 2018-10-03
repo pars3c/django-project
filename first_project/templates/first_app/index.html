@@ -11,8 +11,10 @@
     </head>
     <body>
         <h1>I am super duper ma man</h1>
-        
-        <p>{{ body }}</p>
+        {% for acc in access_records %}
+        <p>{{ acc.name }}</p>
+
+        {% endfor %}
         <img src="{% static 'images/aderito.png' %}" alt="super">
     </body>
 </html>
