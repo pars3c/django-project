@@ -1,3 +1,9 @@
-# django-project
+# In depth Django Project
 
-First_app added
+2 Projects added in the same repo
+
+URL PATTERNS EDITED
+
+TEMPLATES AND STATIC FILES
+
+MODELS CREATED
