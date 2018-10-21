@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from profiles import views
 
+app_name = 'profiles'
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^profile/$', views.profile, name='profile'),
+    url(r'^register/$', views.register, name='register'),
 ]
