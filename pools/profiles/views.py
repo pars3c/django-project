@@ -1,18 +1,19 @@
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
-#from profiles.forms import UserForm
-#from profiles.models import UserProfile
-from django.contrib.auth.models import User
-from profiles.forms import UserCreateForm
+
 # Create your views here.
 def home(request):
     return render(request, 'profiles/home.html')
 
 def register(request):
-    form = UserCreateForm()
+    form = UserCreationForm()
     if request.method == 'POST':
-            form = UserCreateForm(request.POST)
+            form = UserCreationForm(request.POST)
             if form.is_valid():
-                form.save(commit=True)
+                print('super')
+                user = form.save(commit=True)
+                auth_login(request, user)
                 return redirect('/profiles')
                 
             else:
