@@ -1,11 +1,16 @@
-{% extends 'base.html'%}
+{% extends 'profiles/base.html'%}
 
 {% block content %}
 <h1 class="title">Registration</h1>
-<form method="POST">
- {% csrf_token %}
- {{ form.as_p }}
- <input type="submit" value="Submit">
-</form>
-
+<div>
+    {% if registered %}
+        <h1>Thank you for registering</h1>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <input type="submit" value="register">
+    </form>
+</div>
 {% endblock %}
