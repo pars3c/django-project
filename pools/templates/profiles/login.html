@@ -1,0 +1,16 @@
+{% extends 'profiles/base.html'%}
+
+{% block content %}
+<h1 class="title">Please Login</h1>
+
+<form action="{% url 'profiles:user_login' %}" method="POST">
+    {% csrf_token %}
+    <label for="username">Username: </label>
+    <input type="text" name="username" placeholder="Enter Username">
+
+    <label for="password">Password: </label>
+    <input type="text" name="password" placeholder="Enter Password">
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}
