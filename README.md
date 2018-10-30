@@ -1,15 +1,16 @@
-# In depth Django Project
+# Django 1.10 Projects
+
+## 1. Getting Started
 
 
-URL PATTERNS EDITED
+* Open your terminal and go to the root folder
+* Start or create your virtualenv
+* Type the following commands
 
-TEMPLATES AND STATIC FILES
+        pip install -r requirements.txt   
+        
+        cd pools
 
-MODELS CREATED
-
-FORM PATTERNS
-
-MODEL FORMS ADDED
+        python manage.py runserver
 
 
-CRUD METHODS ADDED
